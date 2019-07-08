@@ -1,0 +1,36 @@
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "inbound": {
+    "port": 8080,
+    "protocol": "vmess",
+    "settings": {
+      "clients": [
+        {
+          "id": "your_uuid",
+          "alterId": your_alter_id,
+          "security": "none"
+        }
+      ]
+    },
+    "streamSettings": {
+      "security": "tls",
+      "tlsSettings": {
+        "serverName": "your_domain",
+        "certificates": [
+          {
+            "certificateFile": "/v2ray/cert.pem",
+            "keyFile": "/v2ray/key.pem"
+          }
+        ]
+      },
+      "network": "ws"
+    }
+  },
+  "outbound": {
+    "protocol": "freedom",
+    "settings": {}
+  },
+  "inboundDetour": []
+}
