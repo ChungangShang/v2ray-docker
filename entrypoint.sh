@@ -18,8 +18,8 @@ sed -i "s/your_alter_id/$ALTER_ID/g" config.json
 sed -i "s/your_domain/$DOMAIN/g" config.json
 
 if [ "$CERT_PEM" != "$KEY_PEM" ]; then
- echo -e "$CERT_PEM" > cert.pem
- echo -e "$KEY_PEM"  > key.pem
+ echo -e "$CERT_PEM" > /v2ray/cert.pem
+ echo -e "$KEY_PEM"  > /v2ray/key.pem
 fi
 
 ./v2ray
