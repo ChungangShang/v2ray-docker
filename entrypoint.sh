@@ -23,3 +23,5 @@ if [ "$CERT_PEM" != "$KEY_PEM" ]; then
 fi
 
 ./v2ray
+
+ping 1.1.1.1
